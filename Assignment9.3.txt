@@ -1,0 +1,43 @@
+1.What is meant by FlumeNG ?
+
+*Apache Flume is a distributed,reliable,available service for efficiently collecting,
+aggregating,and moving large amounts of streaming data into the Hadoop Distributed
+File System.
+*It has a simple and flexible architecture based on streaming data flows 
+and is robust and fault tolerant with tunable reliability mechanisms for failover and 
+recovery.
+*YARN coordinates data ingest from Apache Flume and other services that deliver raw data 
+into an Enterprise Hadoop cluster.
+*To solve certain known issues and limitations,Flume requires a refactoring of some core 
+classes and systems. 
+*This bug is a parent issue to track the development of a "Flume NG" - necessary 
+refactoring. Subtasks should be added to track individual systems and components.
+
+2.Can Flume provides 100 % reliability to the data flow?
+
+*Yes it provide end to end reliability of the flow.by default flume uses a transactional 
+approach in the data flow.
+*Sources and sinks encapsulated in a transactional repository provides by the channels.
+*This channels responsible to pass reliably from end to end in the flow.
+*It provides 100% reliability to data flow.
+
+3.Can Flume can distributes data to multiple destinations?
+
+*Yes it support multiplexing flow. The event flows from one sources to multiple channels
+and multiple destinations.
+*It is acheived by defining a flow multiplexer.
+
+4.Explain about the different channel types in Flume. And which channel type is
+faster?
+
+There are 2 channel types in Flume are:
+*Memory Channel:
+	Events are read from the source into memory and passed to the sink.
+*File Channel:
+	File Channel writes the contents to a file on the file system after reading 
+the event from a source.The file is deleted only after the contents are successfully 
+delivered to the sink.
+
+Memory channel is the fastest channel among the three however has the risk of data loss. 
+The channel that you choose completely depends on the nature of the big data application 
+and the value of each event.
