@@ -1,5 +1,4 @@
 1.What is meant by FlumeNG ?
-
 *Apache Flume is a distributed,reliable,available service for efficiently collecting,
 aggregating,and moving large amounts of streaming data into the Hadoop Distributed
 File System.
@@ -14,22 +13,19 @@ classes and systems.
 refactoring. Subtasks should be added to track individual systems and components.
 
 2.Can Flume provides 100 % reliability to the data flow?
-
 *Yes it provide end to end reliability of the flow.by default flume uses a transactional 
 approach in the data flow.
 *Sources and sinks encapsulated in a transactional repository provides by the channels.
 *This channels responsible to pass reliably from end to end in the flow.
 *It provides 100% reliability to data flow.
 
-3.Can Flume can distributes data to multiple destinations?
-
+3.Can Flume can distributes data to multiple destinations?
 *Yes it support multiplexing flow. The event flows from one sources to multiple channels
 and multiple destinations.
 *It is acheived by defining a flow multiplexer.
 
 4.Explain about the different channel types in Flume. And which channel type is
-faster?
-
+faster?
 There are 2 channel types in Flume are:
 *Memory Channel:
 	Events are read from the source into memory and passed to the sink.
